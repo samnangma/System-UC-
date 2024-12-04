@@ -1,179 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Form</title>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CRUD Products with Image</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f8f9fa;
-            color: #333;
-        }
+    <!-- Latest Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+    />
 
-        .container {
-            max-width: 900px;
-            margin-top: 50px;
-        }
+  
+  </head>
+  <style>
+    .divider:after,
+    .divider:before {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: #eee;
+    }
+  </style>
 
-        .form-section {
-            background-color: #ffffff;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-        }
+  <body>
+    <section class="vh-100">
+      <div class="container py-5 h-100">
+        <div class="row d-flex align-items-center justify-content-center h-100">
+          <div class="col-md-8 col-lg-7 col-xl-6">
+            <img
+              src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.svg"
+              class="img-fluid"
+              alt="Phone image"
+            />
+          </div>
+          <div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
+            <form>
+              <!-- Email input -->
+              <div data-mdb-input-init class="form-outline mb-4">
+                <input
+                  type="email"
+                  id="form1Example13"
+                  class="form-control form-control-lg"
+                />
+                <label class="form-label" for="form1Example13"
+                  >Email address</label
+                >
+              </div>
 
-        .table-section {
-            margin-top: 30px;
-        }
+              <!-- Password input -->
+              <div data-mdb-input-init class="form-outline mb-4">
+                <input
+                  type="password"
+                  id="form1Example23"
+                  class="form-control form-control-lg"
+                />
+                <label class="form-label" for="form1Example23">Password</label>
+              </div>
 
-        table {
-            background-color: #ffffff;
-            border-radius: 8px;
-            overflow: hidden;
-        }
-
-        .table th {
-            background-color: #343a40;
-            color: #ffffff;
-        }
-
-        .btn-action {
-            margin-right: 5px;
-        }
-
-        .btn-detail {
-            background-color: #007bff;
-            color: #fff;
-        }
-
-        .btn-detail:hover {
-            background-color: #0056b3;
-        }
-
-        .img-thumbnail {
-            width: 50px;
-            height: 50px;
-            object-fit: cover;
-        }
-    </style>
-</head>
-
-<body>
-    <div class="container">
-        <h1 class="text-center mb-4">Library book Management</h1>
-
-        <div class="form-section">
-            <h5 class="mb-3">Add / Edit Product</h5>
-            <form id="productForm">
-                <div class="mb-3">
-                    <label for="productName" class="form-label">Name</label>
-                    <input type="text" class="form-control" id="productName" placeholder="Enter book name">
+              <div
+                class="d-flex justify-content-around align-items-center mb-4"
+              >
+                <!-- Checkbox -->
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="form1Example3"
+                    checked
+                  />
+                  <label class="form-check-label" for="form1Example3">
+                    Remember me
+                  </label>
                 </div>
-                <div class="mb-3">
-                    <label for="productType" class="form-label">Type</label>
-                    <input type="text" min="0" class="form-control" id="productType" placeholder="Enter book type">
-                </div>
-                <div class="mb-3">
-                    <label for="productImage" class="form-label">Product Image</label>
-                    <input type="file" class="form-control" id="productImage" accept="image/*">
-                </div>
-                <button type="submit" class="btn btn-primary w-100">Save Product</button>
+                <a href="#!">Forgot password?</a>
+              </div>
+
+              <!-- Submit button -->
+              <a
+                href="../2DASH.HTML/index.html"
+                class="btn btn-primary btn-lg btn-block w-100"
+                data-mdb-button-init
+                data-mdb-ripple-init
+              >
+                Sign in
+              </a>
+
+              <div class="divider d-flex align-items-center my-4">
+                <p class="text-center fw-bold mx-3 mb-0 text-muted">OR</p>
+              </div>
+
+              <a
+                data-mdb-ripple-init
+                class="btn btn-primary btn-lg btn-block"
+                style="background-color: #3b5998"
+                href="#!"
+                role="button"
+              >
+                <i class="fab fa-facebook-f me-2"></i>Continue with Facebook
+              </a>
+              <a
+                data-mdb-ripple-init
+                class="btn btn-primary btn-lg btn-block"
+                style="background-color: #55acee"
+                href="#!"
+                role="button"
+              >
+                <i class="fab fa-twitter me-2"></i>Continue with Twitter</a
+              >
             </form>
+          </div>
         </div>
+      </div>
+    </section>
 
-        <div class="table-section">
-            <table class="table table-striped table-hover">
-                <thead class="w-100">
-                    <tr>
-                        <th>Id</th>
-                        <th>Image</th>
-                        <th>Name</th>
-                        <th>Type</th>
-                        <th>Release</th>
-                        <th>Action</th>
-                    </tr>
-                </thead>
-                <tbody id="productTableBody"></tbody>
-            </table>
-        </div>
-    </div>
-
-    <div class="container">
-        <div class="mb-3">
-            <label for="search" class="form-label">Search product</label>
-            <input type="text" class="form-control" id="search" placeholder="Search...">
-            <button class="btn btn-primary my-2" onclick="searchProduct()">Search</button>
-        </div>
-
-        <div id="result-research"></div>
-    </div>
-
-    <script>
-        function searchProduct() {
-            const searchValue = document.getElementById('search').value;
-            const resultDiv = document.getElementById('result-research');
-            resultDiv.innerHTML = '';
-            const products = JSON.parse(localStorage.getItem('products')) || [];
-
-            const filteredProducts = products.filter(product => product.name.includes(searchValue));
-            const table = document.createElement('table');
-            table.classList.add('table', 'table-striped', 'table-hover');
-
-            const thead = document.createElement('thead');
-            const tr = document.createElement('tr');
-            const thId = document.createElement('th');
-            thId.textContent = 'Id';
-            const thImage = document.createElement('th');
-            thImage.textContent = 'Image';
-            const thName = document.createElement('th');
-            thName.textContent = 'Name';
-            const thType = document.createElement('th');
-            thType.textContent = 'Type';
-            const thRelease = document.createElement('th');
-            thRelease.textContent = 'Release';
-
-            tr.appendChild(thId);
-            tr.appendChild(thImage);
-            tr.appendChild(thName);
-            tr.appendChild(thType);
-            tr.appendChild(thRelease);
-            thead.appendChild(tr);
-
-            const tbody = document.createElement('tbody');
-            filteredProducts.forEach(product => {
-                const tr = document.createElement('tr');
-                const tdId = document.createElement('td');
-                tdId.textContent = product.id;
-                const tdImage = document.createElement('td');
-                const img = document.createElement('img');
-                img.src = product.image;
-                img.classList.add('img-thumbnail');
-                tdImage.appendChild(img);
-                const tdName = document.createElement('td');
-                tdName.textContent = product.name;
-                const tdType = document.createElement('td');
-                tdType.textContent = product.type;
-                const tdRelease = document.createElement('td');
-                tdRelease.textContent = product.release;
-
-                tr.appendChild(tdId);
-                tr.appendChild(tdImage);
-                tr.appendChild(tdName);
-                tr.appendChild(tdType);
-                tr.appendChild(tdRelease);
-                tbody.appendChild(tr);
-            });
-
-            table.appendChild(thead);
-            table.appendChild(tbody);
-            resultDiv.appendChild(table);
-        }
-    </script>
-
-    <script src="script.js"></script>
-</body>
-
+    <!-- Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
